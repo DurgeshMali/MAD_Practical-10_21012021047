@@ -1,7 +1,9 @@
 package com.example.mad_practical_10_21012021047
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ListView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.CoroutineScope
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener{
             setPersondata_to_Listview()
         }
+
     }
     fun setPersondata_to_Listview(){
 //        personListView.adapter=PersonAdapter(this, arrayListOf(

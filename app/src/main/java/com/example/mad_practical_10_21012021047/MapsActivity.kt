@@ -1,7 +1,9 @@
 package com.example.mad_practical_10_21012021047
 
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -26,6 +28,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        val obj = intent.getSerializableExtra("Object") as Person
+        Log.i(TAG,"onCreate:Object:$obj")
+        var lat = obj.latitude
+        var log = obj.longitude
+        var title = obj.name
     }
 
     /**
