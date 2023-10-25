@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 val person = Person(jsonObject)
                 personList.add(person)
             }
-            var listView1:ListView = findViewById(R.id.listview1)
+            var listView1 : ListView = findViewById(R.id.listview1)
             listView1.adapter = PersonAdapter(this, personList)
         } catch (ee: JSONException) {
             ee.printStackTrace()
