@@ -16,6 +16,7 @@ class PersonAdapter(context:Context,val array:ArrayList<Person>):ArrayAdapter<Pe
         view.findViewById<TextView>(R.id.textview2).text = persondata.phoneNo
         view.findViewById<TextView>(R.id.textview3).text = persondata.emailid
         view.findViewById<TextView>(R.id.textview4).text = persondata.address
+
         return view
     }
 }
